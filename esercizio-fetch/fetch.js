@@ -9,19 +9,16 @@ async function fetchData() {
   try {
     const response = await fetch("https://ringsdb.com/api/public/card/01073");
     const data = await response.json();
-    const urlAPI = "https://ringsdb.com"
-
-    console.log(data)
+    const urlAPI = "https://ringsdb.com";
 
     const nameCard = data.name;
     const image = data.imagesrc;
 
-    const h1 = document.querySelector("h1")
-    const immagine = document.querySelector("img")
+    const h1 = document.querySelector("h1");
+    const immagine = document.querySelector("img");
 
     h1.innerText = nameCard;
-    immagine.setAttribute("src", urlAPI + image)
-
+    immagine.setAttribute("src", urlAPI + image);
   } catch (error) {
     console.error(error);
   }
