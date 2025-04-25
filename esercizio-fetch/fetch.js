@@ -12,13 +12,13 @@ async function fetchData() {
     const urlAPI = "https://ringsdb.com";
 
     const nameCard = data.name;
-    const image = data.imagesrc;
+    const imgCard = data.imagesrc;
 
     const h1 = document.querySelector("h1");
-    const immagine = document.querySelector("img");
+    const img = document.querySelector("img");
 
     h1.innerText = nameCard;
-    immagine.setAttribute("src", urlAPI + image);
+    img.setAttribute("src", urlAPI + imgCard);
   } catch (error) {
     console.error(error);
   }
